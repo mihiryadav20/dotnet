@@ -1,0 +1,389 @@
+@{
+    ViewData["Title"] = "Audit";
+}
+
+<div class="audit-container" style="padding: 1.5rem;">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-2">
+                    <li class="breadcrumb-item"><a href="#" style="color: var(--brand-blue);">Audit</a></li>
+                </ol>
+            </nav>
+            <h2 class="mb-0" style="font-weight: 600;">Audit</h2>
+        </div>
+        <div class="d-flex gap-3">
+            <button class="btn btn-outline-primary">Audit List</button>
+            <button class="btn btn-outline-secondary">CAPA Register</button>
+        </div>
+    </div>
+
+    <!-- Audit List Section -->
+    <div class="card border-0 shadow-sm">
+        <div class="card-header bg-var(--sidebar-text) border-bottom">
+            <h5 class="mb-0" style="font-weight: 600;">Audit List</h5>
+        </div>
+        <div class="card-body">
+            <!-- Filters -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <select class="form-select" style="border-radius: 8px;">
+                        <option>Select Organization</option>
+                        <option>Organization Name</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-text bg-var(--sidebar-text) border-end-0" style="border-radius: 8px 0 0 8px;">
+                            <i class="fas fa-search text-muted"></i>
+                        </span>
+                        <input type="text" class="form-control border-start-0" placeholder="Search Audit Name" style="border-radius: 0 8px 8px 0;">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-outline-secondary w-100" style="border-radius: 8px;">
+                        <i class="fas fa-filter"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="table-responsive table-scroll-container">
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th style="font-weight: 600; color: #6c757d; font-size: 0.875rem;">AUDIT NAME</th>
+                            <th style="font-weight: 600; color: #6c757d; font-size: 0.875rem;">AUDIT START DATE</th>
+                            <th style="font-weight: 600; color: #6c757d; font-size: 0.875rem;">AUDIT END DATE</th>
+                            <th style="font-weight: 600; color: #6c757d; font-size: 0.875rem;">STATUS</th>
+                            <th style="font-weight: 600; color: #6c757d; font-size: 0.875rem;">ORGANIZATION</th>
+                            <th style="font-weight: 600; color: #6c757d; font-size: 0.875rem;">AUDITOR NAME</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: 500;">Audit Name 1</td>
+                            <td>01-Jan-2025</td>
+                            <td>01-Jan-2025</td>
+                            <td><span class="badge status-badge rounded-pill">Open</span></td>
+                            <td>Organization Name</td>
+                            <td>Audit Name 1</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary border-0">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;">Audit Name 2</td>
+                            <td>01-Jan-2025</td>
+                            <td>01-Jan-2025</td>
+                            <td><span class="badge status-badge rounded-pill">Scheduled</span></td>
+                            <td>Organization Name</td>
+                            <td>Audit Name 1</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary border-0">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;">Audit Name 3</td>
+                            <td>01-Jan-2025</td>
+                            <td>01-Jan-2025</td>
+                            <td><span class="badge status-badge rounded-pill">In Progress</span></td>
+                            <td>Organization Name</td>
+                            <td>Audit Name 1</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary border-0">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;">Audit Name 4</td>
+                            <td>01-Jan-2025</td>
+                            <td>01-Jan-2025</td>
+                            <td><span class="badge status-badge rounded-pill">Review</span></td>
+                            <td>Organization Name</td>
+                            <td>Audit Name 1</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary border-0">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;">Audit Name 5</td>
+                            <td>01-Jan-2025</td>
+                            <td>01-Jan-2025</td>
+                            <td><span class="badge status-badge rounded-pill">Return</span></td>
+                            <td>Organization Name</td>
+                            <td>Audit Name 1</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary border-0">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;">Audit Name 6</td>
+                            <td>01-Jan-2025</td>
+                            <td>01-Jan-2025</td>
+                            <td><span class="badge status-badge rounded-pill">Closed</span></td>
+                            <td>Organization Name</td>
+                            <td>Audit Name 1</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary border-0">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;">Audit Name 7</td>
+                            <td>01-Jan-2025</td>
+                            <td>01-Jan-2025</td>
+                            <td><span class="badge status-badge rounded-pill">Active</span></td>
+                            <td>Organization Name</td>
+                            <td>Audit Name 1</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary border-0">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;">Audit Name 8</td>
+                            <td>01-Jan-2025</td>
+                            <td>01-Jan-2025</td>
+                            <td><span class="badge status-badge rounded-pill">Active</span></td>
+                            <td>Organization Name</td>
+                            <td>Audit Name 1</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary border-0">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;">Audit Name 9</td>
+                            <td>01-Jan-2025</td>
+                            <td>01-Jan-2025</td>
+                            <td><span class="badge status-badge rounded-pill">Active</span></td>
+                            <td>Organization Name</td>
+                            <td>Audit Name 1</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary border-0">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;">Audit Name 10</td>
+                            <td>01-Jan-2025</td>
+                            <td>01-Jan-2025</td>
+                            <td><span class="badge status-badge rounded-pill">Scheduled</span></td>
+                            <td>Organization Name</td>
+                            <td>Audit Name 1</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary border-0">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;">Audit Name 11</td>
+                            <td>01-Jan-2025</td>
+                            <td>01-Jan-2025</td>
+                            <td><span class="badge status-badge rounded-pill">In Progress</span></td>
+                            <td>Organization Name</td>
+                            <td>Audit Name 1</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary border-0">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;">Audit Name 12</td>
+                            <td>01-Jan-2025</td>
+                            <td>01-Jan-2025</td>
+                            <td><span class="badge status-badge rounded-pill">Closed</span></td>
+                            <td>Organization Name</td>
+                            <td>Audit Name 1</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary border-0">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;">Audit Name 13</td>
+                            <td>01-Jan-2025</td>
+                            <td>01-Jan-2025</td>
+                            <td><span class="badge status-badge rounded-pill">Review</span></td>
+                            <td>Organization Name</td>
+                            <td>Audit Name 1</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary border-0">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;">Audit Name 14</td>
+                            <td>01-Jan-2025</td>
+                            <td>01-Jan-2025</td>
+                            <td><span class="badge status-badge rounded-pill">Active</span></td>
+                            <td>Organization Name</td>
+                            <td>Audit Name 1</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary border-0">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;">Audit Name 15</td>
+                            <td>01-Jan-2025</td>
+                            <td>01-Jan-2025</td>
+                            <td><span class="badge status-badge rounded-pill">Return</span></td>
+                            <td>Organization Name</td>
+                            <td>Audit Name 1</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-secondary border-0">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <div class="text-muted">
+                    Displaying 20 results of 100
+                </div>
+                <nav>
+                    <ul class="pagination mb-0">
+                        <li class="page-item">
+                            <a class="page-link" href="#" style="border-radius: 8px 0 0 8px;">Page</a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#" style="background: var(--brand-blue); border-color: var(--brand-blue);">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">...</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">9</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">10</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" style="border-radius: 0 8px 8px 0;">&gt;</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+    .table-scroll-container {
+        height: calc(100vh - 420px); /* Adjust this value based on your header/footer/filter height */
+        overflow-y: auto;
+    }
+
+    .table-scroll-container thead th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: var(--white); /* This should match your thead background */
+    }
+    
+    .breadcrumb {
+        background: none;
+        padding: 0;
+        margin: 0;
+        font-size: 0.875rem;
+    }
+    
+    .breadcrumb-item + .breadcrumb-item::before {
+        content: "/";
+        color: var(--sidebar-text);
+    }
+    
+    .card {
+        border-radius: 12px;
+    }
+    
+    .table th {
+        border-top: none;
+        padding: 1rem 0.75rem;
+    }
+    
+    .table td {
+        padding: 1rem 0.75rem;
+        vertical-align: middle;
+    }
+    
+    .badge {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+    }
+    .status-badge {
+        background-color: var(--status-green) !important;
+        color: var(--sidebar-text);
+    }
+    
+    .btn-outline-primary {
+        border-color: var(--brand-blue);
+        color: var(--brand-blue);
+    }
+    
+    .btn-outline-primary:hover {
+        background-color: var(--brand-blue);
+        border-color: var(--brand-blue);
+    }
+    
+    .form-select, .form-control {
+        border-color: var(--sidebar-bg);
+    }
+    
+    .form-select:focus, .form-control:focus {
+        border-color: var(--brand-blue);
+        box-shadow: 0 0 0 0.2rem rgba(var(--sidebar-bg), 124, 235, 0.25);
+    }
+    
+    .page-link {
+        color: #000; /* Black font color for pagination */
+        border-color: var(--sidebar-bg);
+    }
+    
+    .page-item.active .page-link {
+        background-color: var(--brand-blue);
+        border-color: var(--brand-blue);
+    }
+    
+    .page-link:hover {
+        color: var(--brand-blue);
+        background-color: var(--white);
+        border-color: var(--sidebar-bg);
+    }
+</style>

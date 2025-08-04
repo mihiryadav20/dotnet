@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/mihir-yadav/Documents/Codes and Docs/Practise Code/dotnet projects/MyMvcApp/MyMvcApp.csproj": {}
+  },
+  "projects": {
+    "/home/mihir-yadav/Documents/Codes and Docs/Practise Code/dotnet projects/MyMvcApp/MyMvcApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mihir-yadav/Documents/Codes and Docs/Practise Code/dotnet projects/MyMvcApp/MyMvcApp.csproj",
+        "projectName": "MyMvcApp",
+        "projectPath": "/home/mihir-yadav/Documents/Codes and Docs/Practise Code/dotnet projects/MyMvcApp/MyMvcApp.csproj",
+        "packagesPath": "/home/mihir-yadav/.nuget/packages/",
+        "outputPath": "/home/mihir-yadav/Documents/Codes and Docs/Practise Code/dotnet projects/MyMvcApp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mihir-yadav/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.118/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

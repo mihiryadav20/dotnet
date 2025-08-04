@@ -1,0 +1,65 @@
+<!-- Mobile Toggle Button -->
+<button id="sidebarToggle" class="md:hidden fixed top-2 left-2 z-50 bg-brand-blue text-white border-none rounded px-3 py-2">
+    <i class="fas fa-bars"></i>
+</button>
+
+<div id="sidebar" class="sidebar-container fixed top-0 left-0 w-56 h-screen bg-sidebar-bg z-40 transform transition-transform duration-300 ease-in-out -translate-x-full md:translate-x-0">
+    <div class="py-8 px-4 text-center border-b border-gray-600 flex justify-between items-center">
+        <span class="text-sidebar-text text-2xl font-bold">MyMvcApp</span>
+        <button id="sidebarClose" class="md:hidden bg-transparent border-none text-sidebar-text">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <ul class="flex flex-col mt-6">
+        <li>
+            <a class="block py-3 px-5 mx-2 rounded-lg text-sidebar-text transition-all duration-200 hover:bg-white hover:bg-opacity-10 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Dashboard" ? "bg-brand-blue font-bold" : "")" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+        </li>
+        <li>
+            <a class="block py-3 px-5 mx-2 rounded-lg text-sidebar-text transition-all duration-200 hover:bg-white hover:bg-opacity-10 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Reports" ? "bg-brand-blue font-bold" : "")" asp-controller="Reports" asp-action="Index">Reports</a>
+        </li>
+        <li>
+            <a class="block py-3 px-5 mx-2 rounded-lg text-sidebar-text transition-all duration-200 hover:bg-white hover:bg-opacity-10 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Policy" ? "bg-brand-blue font-bold" : "")" asp-controller="Policy" asp-action="Index">Policy</a>
+        </li>
+        <li>
+            <a class="block py-3 px-5 mx-2 rounded-lg text-sidebar-text transition-all duration-200 hover:bg-white hover:bg-opacity-10 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Registers" ? "bg-brand-blue font-bold" : "")" asp-controller="Registers" asp-action="Index">Registers</a>
+        </li>
+        <li>
+            <a class="block py-3 px-5 mx-2 rounded-lg text-sidebar-text transition-all duration-200 hover:bg-white hover:bg-opacity-10 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Ticket" ? "bg-brand-blue font-bold" : "")" asp-controller="Ticket" asp-action="Index">Ticket</a>
+        </li>
+        <li>
+            <a class="block py-3 px-5 mx-2 rounded-lg text-sidebar-text transition-all duration-200 hover:bg-white hover:bg-opacity-10 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Organization" ? "bg-brand-blue font-bold" : "")" asp-controller="Organization" asp-action="Index">Organization</a>
+        </li>
+        <li>
+            <a class="block py-3 px-5 mx-2 rounded-lg text-sidebar-text transition-all duration-200 hover:bg-white hover:bg-opacity-10 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Audit" ? "bg-brand-blue font-bold" : "")" asp-controller="Audit" asp-action="Index">Audit</a>
+        </li>
+    </ul>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebarClose = document.getElementById('sidebarClose');
+        
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('translate-x-0');
+            sidebar.classList.toggle('-translate-x-full');
+        });
+        
+        sidebarClose.addEventListener('click', function() {
+            sidebar.classList.add('-translate-x-full');
+            sidebar.classList.remove('translate-x-0');
+        });
+        
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const isMobile = window.innerWidth < 768;
+            const isClickInsideSidebar = sidebar.contains(event.target);
+            const isClickOnToggle = sidebarToggle.contains(event.target);
+            
+            if (isMobile && !isClickInsideSidebar && !isClickOnToggle && !sidebar.classList.contains('-translate-x-full')) {
+                sidebar.classList.add('-translate-x-full');
+                sidebar.classList.remove('translate-x-0');
+            }
+        });
+    });
+</script>
+</div>
