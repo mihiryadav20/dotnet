@@ -141,3 +141,4 @@
 /home/mihir-yadav/Documents/Codes and Docs/Practise Code/dotnet projects/MyMvcApp/obj/Debug/net8.0/MyMvcApp.pdb
 /home/mihir-yadav/Documents/Codes and Docs/Practise Code/dotnet projects/MyMvcApp/obj/Debug/net8.0/MyMvcApp.genruntimeconfig.cache
 /home/mihir-yadav/Documents/Codes and Docs/Practise Code/dotnet projects/MyMvcApp/obj/Debug/net8.0/ref/MyMvcApp.dll
+/home/mihir-yadav/Documents/Codes and Docs/Practise Code/dotnet projects/MyMvcApp/obj/Debug/net8.0/MyMvcApp.sourcelink.json

@@ -2,298 +2,312 @@
     ViewData["Title"] = "Audit";
 }
 
-<div class="audit-container" style="padding: 1.5rem;">
+<div class="w-full font-lato p-6">
     <!-- Header -->
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="flex justify-between items-center mb-6">
         <div>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb mb-2">
-                    <li class="breadcrumb-item"><a href="#" style="color: var(--brand-blue);">Audit</a></li>
+            <nav class="text-sm mb-2">
+                <ol class="flex space-x-2">
+                    <li><a href="#" class="text-brand-blue hover:text-blue-700">Audit</a></li>
                 </ol>
             </nav>
-            <h2 class="mb-0" style="font-weight: 600;">Audit</h2>
+            <h2 class="text-3xl font-semibold text-gray-800">Audit</h2>
         </div>
-        <div class="d-flex gap-3">
-            <button class="btn btn-outline-primary">Audit List</button>
-            <button class="btn btn-outline-secondary">CAPA Register</button>
+        <div class="flex space-x-3">
+            <button class="px-4 py-2 border border-brand-blue text-brand-blue rounded-md hover:bg-brand-blue hover:text-white transition-colors">Audit List</button>
+            <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors">CAPA Register</button>
         </div>
     </div>
 
     <!-- Audit List Section -->
-    <div class="card border-0 shadow-sm">
-        <div class="card-header bg-var(--sidebar-text) border-bottom">
-            <h5 class="mb-0" style="font-weight: 600;">Audit List</h5>
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+        <div class="px-6 py-4 border-b border-gray-200 bg-gray-50">
+            <h5 class="text-lg font-semibold text-gray-800">Audit List</h5>
         </div>
-        <div class="card-body">
+        <div class="p-6">
             <!-- Filters -->
-            <div class="row mb-4">
-                <div class="col-md-6">
-                    <select class="form-select" style="border-radius: 8px;">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-6">
+                <div class="md:col-span-6">
+                    <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-blue">
                         <option>Select Organization</option>
                         <option>Organization Name</option>
                     </select>
                 </div>
-                <div class="col-md-4">
-                    <div class="input-group">
-                        <span class="input-group-text bg-var(--sidebar-text) border-end-0" style="border-radius: 8px 0 0 8px;">
-                            <i class="fas fa-search text-muted"></i>
+                <div class="md:col-span-4">
+                    <div class="flex">
+                        <span class="inline-flex items-center px-3 text-gray-500 bg-gray-50 border border-r-0 border-gray-300 rounded-l-md">
+                            <i class="fas fa-search"></i>
                         </span>
-                        <input type="text" class="form-control border-start-0" placeholder="Search Audit Name" style="border-radius: 0 8px 8px 0;">
+                        <input type="text" class="flex-1 px-3 py-2 border border-gray-300 rounded-r-md focus:outline-none focus:ring-2 focus:ring-brand-blue" placeholder="Search Audit Name">
                     </div>
                 </div>
-                <div class="col-md-2">
-                    <button class="btn btn-outline-secondary w-100" style="border-radius: 8px;">
+                <div class="md:col-span-2">
+                    <button class="w-full px-3 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors">
                         <i class="fas fa-filter"></i>
                     </button>
                 </div>
             </div>
 
             <!-- Table -->
-            <div class="table-responsive table-scroll-container">
-                <table class="table table-hover">
-                    <thead class="table-light">
-                        <tr>
-                            <th style="font-weight: 600; color: #6c757d; font-size: 0.875rem;">AUDIT NAME</th>
-                            <th style="font-weight: 600; color: #6c757d; font-size: 0.875rem;">AUDIT START DATE</th>
-                            <th style="font-weight: 600; color: #6c757d; font-size: 0.875rem;">AUDIT END DATE</th>
-                            <th style="font-weight: 600; color: #6c757d; font-size: 0.875rem;">STATUS</th>
-                            <th style="font-weight: 600; color: #6c757d; font-size: 0.875rem;">ORGANIZATION</th>
-                            <th style="font-weight: 600; color: #6c757d; font-size: 0.875rem;">AUDITOR NAME</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: 500;">Audit Name 1</td>
-                            <td>01-Jan-2025</td>
-                            <td>01-Jan-2025</td>
-                            <td><span class="badge status-badge rounded-pill">Open</span></td>
-                            <td>Organization Name</td>
-                            <td>Audit Name 1</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 500;">Audit Name 2</td>
-                            <td>01-Jan-2025</td>
-                            <td>01-Jan-2025</td>
-                            <td><span class="badge status-badge rounded-pill">Scheduled</span></td>
-                            <td>Organization Name</td>
-                            <td>Audit Name 1</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 500;">Audit Name 3</td>
-                            <td>01-Jan-2025</td>
-                            <td>01-Jan-2025</td>
-                            <td><span class="badge status-badge rounded-pill">In Progress</span></td>
-                            <td>Organization Name</td>
-                            <td>Audit Name 1</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 500;">Audit Name 4</td>
-                            <td>01-Jan-2025</td>
-                            <td>01-Jan-2025</td>
-                            <td><span class="badge status-badge rounded-pill">Review</span></td>
-                            <td>Organization Name</td>
-                            <td>Audit Name 1</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 500;">Audit Name 5</td>
-                            <td>01-Jan-2025</td>
-                            <td>01-Jan-2025</td>
-                            <td><span class="badge status-badge rounded-pill">Return</span></td>
-                            <td>Organization Name</td>
-                            <td>Audit Name 1</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 500;">Audit Name 6</td>
-                            <td>01-Jan-2025</td>
-                            <td>01-Jan-2025</td>
-                            <td><span class="badge status-badge rounded-pill">Closed</span></td>
-                            <td>Organization Name</td>
-                            <td>Audit Name 1</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 500;">Audit Name 7</td>
-                            <td>01-Jan-2025</td>
-                            <td>01-Jan-2025</td>
-                            <td><span class="badge status-badge rounded-pill">Active</span></td>
-                            <td>Organization Name</td>
-                            <td>Audit Name 1</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 500;">Audit Name 8</td>
-                            <td>01-Jan-2025</td>
-                            <td>01-Jan-2025</td>
-                            <td><span class="badge status-badge rounded-pill">Active</span></td>
-                            <td>Organization Name</td>
-                            <td>Audit Name 1</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 500;">Audit Name 9</td>
-                            <td>01-Jan-2025</td>
-                            <td>01-Jan-2025</td>
-                            <td><span class="badge status-badge rounded-pill">Active</span></td>
-                            <td>Organization Name</td>
-                            <td>Audit Name 1</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 500;">Audit Name 10</td>
-                            <td>01-Jan-2025</td>
-                            <td>01-Jan-2025</td>
-                            <td><span class="badge status-badge rounded-pill">Scheduled</span></td>
-                            <td>Organization Name</td>
-                            <td>Audit Name 1</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 500;">Audit Name 11</td>
-                            <td>01-Jan-2025</td>
-                            <td>01-Jan-2025</td>
-                            <td><span class="badge status-badge rounded-pill">In Progress</span></td>
-                            <td>Organization Name</td>
-                            <td>Audit Name 1</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 500;">Audit Name 12</td>
-                            <td>01-Jan-2025</td>
-                            <td>01-Jan-2025</td>
-                            <td><span class="badge status-badge rounded-pill">Closed</span></td>
-                            <td>Organization Name</td>
-                            <td>Audit Name 1</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 500;">Audit Name 13</td>
-                            <td>01-Jan-2025</td>
-                            <td>01-Jan-2025</td>
-                            <td><span class="badge status-badge rounded-pill">Review</span></td>
-                            <td>Organization Name</td>
-                            <td>Audit Name 1</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 500;">Audit Name 14</td>
-                            <td>01-Jan-2025</td>
-                            <td>01-Jan-2025</td>
-                            <td><span class="badge status-badge rounded-pill">Active</span></td>
-                            <td>Organization Name</td>
-                            <td>Audit Name 1</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 500;">Audit Name 15</td>
-                            <td>01-Jan-2025</td>
-                            <td>01-Jan-2025</td>
-                            <td><span class="badge status-badge rounded-pill">Return</span></td>
-                            <td>Organization Name</td>
-                            <td>Audit Name 1</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+                <div class="max-h-96 overflow-y-auto">
+                    <table class="w-full">
+                        <thead class="bg-gray-50 sticky top-0 z-10">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">AUDIT NAME</th>
+                                <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">AUDIT START DATE</th>
+                                <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">AUDIT END DATE</th>
+                                <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">STATUS</th>
+                                <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">ORGANIZATION</th>
+                                <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">AUDITOR NAME</th>
+                                <th class="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-status-green text-white">Open</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Organization Name</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Audit Name 2</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-500 text-white">Scheduled</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Organization Name</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Audit Name 3</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-yellow-500 text-white">In Progress</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Organization Name</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Audit Name 4</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-purple-500 text-white">Review</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Organization Name</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Audit Name 5</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-orange-500 text-white">Return</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Organization Name</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Audit Name 6</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-gray-500 text-white">Closed</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Organization Name</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Audit Name 7</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-status-green text-white">Active</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Organization Name</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Audit Name 8</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-status-green text-white">Active</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Organization Name</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Audit Name 9</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-status-green text-white">Active</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Organization Name</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Audit Name 10</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-500 text-white">Scheduled</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Organization Name</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Audit Name 11</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-yellow-500 text-white">In Progress</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Organization Name</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Audit Name 12</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-gray-500 text-white">Closed</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Organization Name</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Audit Name 13</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-purple-500 text-white">Review</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Organization Name</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Audit Name 14</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-orange-500 text-white">Return</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Organization Name</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Audit Name 15</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01-Jan-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-status-green text-white">Open</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Organization Name</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Audit Name 1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
-            <!-- Pagination -->
-            <div class="d-flex justify-content-between align-items-center mt-4">
-                <div class="text-muted">
+            <!-- Pagination Section -->
+            <div class="flex justify-between items-center mt-6">
+                <div class="text-sm text-gray-500">
                     Displaying 20 results of 100
                 </div>
-                <nav>
-                    <ul class="pagination mb-0">
-                        <li class="page-item">
-                            <a class="page-link" href="#" style="border-radius: 8px 0 0 8px;">Page</a>
-                        </li>
-                        <li class="page-item active">
-                            <a class="page-link" href="#" style="background: var(--brand-blue); border-color: var(--brand-blue);">1</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">3</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">...</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">9</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">10</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" style="border-radius: 0 8px 8px 0;">&gt;</a>
-                        </li>
-                    </ul>
+                <nav class="flex items-center space-x-1">
+                    <a href="#" class="px-3 py-2 text-gray-500 border border-gray-300 rounded-l-md hover:bg-gray-50">&laquo;</a>
+                    <a href="#" class="px-3 py-2 bg-brand-blue text-white border border-brand-blue">1</a>
+                    <a href="#" class="px-3 py-2 text-gray-700 border border-gray-300 hover:bg-gray-50">2</a>
+                    <a href="#" class="px-3 py-2 text-gray-700 border border-gray-300 hover:bg-gray-50">3</a>
+                    <span class="px-3 py-2 text-gray-500">...</span>
+                    <a href="#" class="px-3 py-2 text-gray-700 border border-gray-300 hover:bg-gray-50">9</a>
+                    <a href="#" class="px-3 py-2 text-gray-700 border border-gray-300 hover:bg-gray-50">10</a>
+                    <a href="#" class="px-3 py-2 text-gray-500 border border-gray-300 rounded-r-md hover:bg-gray-50">&raquo;</a>
                 </nav>
             </div>
         </div>
