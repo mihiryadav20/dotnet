@@ -21,16 +21,16 @@
             <a class="block py-3 px-5 mx-2 rounded-lg text-sidebar-text transition-all duration-200 hover:bg-white hover:bg-opacity-10 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Policy" ? "bg-brand-blue font-bold" : "")" asp-controller="Policy" asp-action="Index">Policy</a>
         </li>
         <li>
-            <a class="block py-3 px-5 mx-2 rounded-lg text-sidebar-text transition-all duration-200 hover:bg-white hover:bg-opacity-10 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Registers" ? "bg-brand-blue font-bold" : "")" asp-controller="Registers" asp-action="Index">Registers</a>
+            <a class="block py-3 px-5 mx-2 rounded-lg text-sidebar-text transition-all duration-200 hover:bg-white hover:bg-opacity-10 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Asset" ? "bg-brand-blue font-bold" : "")" asp-controller="Asset" asp-action="Index">Asset</a>
+        </li>
+        <li>
+            <a class="block py-3 px-5 mx-2 rounded-lg text-sidebar-text transition-all duration-200 hover:bg-white hover:bg-opacity-10 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Audit" ? "bg-brand-blue font-bold" : "")" asp-controller="Audit" asp-action="Index">Audit</a>
         </li>
         <li>
             <a class="block py-3 px-5 mx-2 rounded-lg text-sidebar-text transition-all duration-200 hover:bg-white hover:bg-opacity-10 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Ticket" ? "bg-brand-blue font-bold" : "")" asp-controller="Ticket" asp-action="Index">Ticket</a>
         </li>
         <li>
             <a class="block py-3 px-5 mx-2 rounded-lg text-sidebar-text transition-all duration-200 hover:bg-white hover:bg-opacity-10 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Organization" ? "bg-brand-blue font-bold" : "")" asp-controller="Organization" asp-action="Index">Organization</a>
-        </li>
-        <li>
-            <a class="block py-3 px-5 mx-2 rounded-lg text-sidebar-text transition-all duration-200 hover:bg-white hover:bg-opacity-10 @(ViewContext.RouteData.Values["controller"]?.ToString() == "Audit" ? "bg-brand-blue font-bold" : "")" asp-controller="Audit" asp-action="Index">Audit</a>
         </li>
     </ul>
 <script>
